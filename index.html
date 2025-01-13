@@ -1,0 +1,15 @@
+<body>
+    <h1 id="title"> title</h1>
+</body>
+<script>
+    //let title = document.getElementById("title"); //id 가져와서 자바스크립트에서 쓰기
+
+   // title.style.color = 'white'
+  //  title.style.background = 'orange'
+  // title.innerHTML //객체 추가 수정 innerText도 비슷한데 html로 받아들이냐 text로 받아들이냐의 차이
+
+    let title = document.querySelector("#title"); //#을 부이면 id값으로 가져오기
+    title.style.color = 'white';
+    title.style.background = 'orange';
+    title.innerText = "dom 객체 조작";
+</script>

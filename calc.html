@@ -1,0 +1,42 @@
+<body>
+    <input type="text" id="num1"/> 
+
+    <select id="operations">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+    </select>
+
+    <input type="text" id="num2"/> 
+    <input type="button" id="btn" value="계산"/>
+    <div id="result"></div>
+</body>
+
+<script>
+    let num1 = document.querySelector("#num1")
+    let num2 = document.querySelector("#num2")
+    let btn = document.querySelector("#btn")
+    let result = document.querySelector("#result")
+    let operations = document.querySelector("#operations")
+
+    btn.addEventListener("click", function(){
+        let a = parseInt(num1.value);
+        let b = parseInt(num2.value);
+        let r;
+        switch(operations.value){
+            case "+": r = a+b;
+            break;
+            case "-": r = a-b;
+            break;
+            case "*": r = a*b;
+            break;
+            case "/": r = a/b;
+            break;
+
+        }
+
+        result.innerText = a+b;
+    });
+
+</script>

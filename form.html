@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>form 객체</title>
+	<style>
+		label{ 
+		  float: left;
+		  width: 80px;
+		}
+		input,label{ 
+		  display: block; 
+		  margin-bottom: 10px;;
+		}	
+	</style>	
+</head>
+<body>
+	<form name="frm">
+	  <label for="myId">ID: </label>
+	  <input type="text" id="myId" name="myId" />
+	  <label for="pwd">password: </label>
+	  <input type="password" id="pwd" name="pwd" />
+	  <input type="button" name="send" value="로그인" />
+	</form>	
+
+	<script>
+		let a= document.frm //form 태그를 name으로 잡는 방법 1 > 접근권 따오는 법
+		// let b = document.forms['frm'] // 2
+		
+		let id = frm.myId //id 입력란
+		let pw = frm.pwd //pw 입력란
+		let btn = frm.send // 로그인 버튼
+
+		btn.onclick = function(){ //클릭하면 함수를 재생
+			let input_id = id.value //속성에 접근한 거라 이제 이 값을 사용할 수 있음
+			let input_pw = pw.value
+
+			//console.log(input_id)
+			//console.log(input_pw) 콘솔에서 보여줘
+
+			if ( input_id == "" || input_pw == ""){
+				alert("아이디나 패스워드를 입력해 주세요")
+			} else {
+				alert("로그인 되었습니다")
+			}
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this 객체</title>	
+</head>
+<body>
+  	<ul id='gnb'>
+    	<li>click</li>
+    	<li>second</li>
+    	<li>third</li>
+ 	</ul>
+	<script>
+		let gnb = document.getElementById('gnb'); //html 전체에서 gnb id 가진 놈 찾아줘
+		let li = gnb.getElementsByTagName('li') 
+
+		li[0].onclick = function() { //click 배열로 잡혀져 있고 click만 쓸 거기 대문에 함수로 잡아 줌
+			this.style.backgroundColor = 'red'
+		}
+	</script>  
+</body>
+</html>

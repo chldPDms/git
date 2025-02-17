@@ -1,0 +1,31 @@
+<form name="frm">
+    <input type="text" name="n1" size="3" value="9"/> +
+    <input type="text" name="n2" size="3" value="3"/> =
+    <input type="text" name="a" size="3">
+    <br /> <br />
+    <button onclick="result()">확인</button>
+</form>
+
+<script>
+    let n1 = document.forms.frm['n1']    
+    let n2 = document.forms.frm['n2']
+    let result2 = document.forms.frm['a']
+
+    function result(){
+    let n1_input = parseInt(n1.value)
+    let n2_input = parseInt(n2.value)
+    let re_input = parseInt(result2.value)
+    
+    if(n1_input + n2_input == re_input){
+        alert("정답")
+    }
+    else {
+       alert("틀림")
+    }
+}
+
+
+
+
+    
+</script>

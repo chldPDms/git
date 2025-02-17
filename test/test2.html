@@ -1,0 +1,24 @@
+<img src="images/img01.jpg" width="100">
+<img src="images/img02.jpg" width="100">
+<img src="images/img03.jpg" width="100">
+
+<div>
+    <button onclick="bu()">바꾸기</button>
+</div>
+
+<script>
+    
+
+    function bu(){
+        let imgs = document.querySelectorAll("img")
+        let img1 = imgs[0].getAttribute("src")
+        let img3 = imgs[2].getAttribute("src")
+        
+
+        imgs[0].setAttribute("src", img3)
+        imgs[2].setAttribute("src", img1)
+        
+        
+       
+    }
+</script>
